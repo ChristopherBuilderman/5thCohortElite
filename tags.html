@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tags</title>
+    </head>
+    <body>
+        <!-- Jessna -->
+        <div id="Jessna">
+                <label for="Name">Please Type Something:</label>
+                <input type="text" id="Name" name="Name" placeholder="Type something"><br><br>
+                <button onclick="submit(document.getElementById('Name').value)">Submit</button>
+            <canvas id="canvas">
+            </canvas>
+            <article>
+                <a href="#"><p>This is a paragraph</p></a>
+            </article>
+            <script>
+                function submit (text) {
+                    if(text != null) {
+                        var canvas = document.getElementById("canvas");
+                        var ctx = canvas.getContext("2d");
+                        ctx.font = "30px Arial";
+                        ctx.fillText(text ,10,50);
+                    } else {
+                        var canvas = document.getElementById("canvas");
+                        var ctx = canvas.getContext("2d");
+                        ctx.font = "30px Arial";
+                        ctx.fillText("Aww man, you should have typed something" ,10,50);
+                    }
+                }
+
+            </script><br/>
+        </div>
+
+    </body>
+</html>
