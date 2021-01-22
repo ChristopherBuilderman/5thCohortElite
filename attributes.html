@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <style>
+        .Title {
+    font-size: 40px;
+    font-family: gabriola;
+  }
+    </style>
+    <head class="Title">5th COHORT ELITES</head>
+    <body>
+        <div>
+            <nav>
+                <ul style="display: inline-block;">
+                    <li><a href="team/chris.html>Chris' Page"</a></li>
+                    <li><a href="team/jessna.html">Jessna's Page</a></li>
+                    <li><a href="team/jake.html">Jake's Page</a></li>
+                    <li><a href="team/javon.html">Javon's Page</a></li>
+                    <li><a href="team/damian.html">Damian's Page</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Jessna -->
+        <div id="Jessna" style="width: 900px; margin: auto;">
+                <label for="Name">Please Type Something:</label>
+                <input style="padding: 4px; width:150px;" type="text" id="Name" name="Name" placeholder="Type something" title="Input for Text"><br><br>
+                <button onclick="submit(document.getElementById('Name').value)">Submit</button>
+            <canvas id="canvas" width="750px" height="500px">
+            </canvas>
+            <article width="100px">
+                <a href="#"><p>This is a paragraph</p></a>
+            </article>
+            <script>
+                function submit (text) {
+                    if(text != null) {
+                        var canvas = document.getElementById("canvas");
+                        var ctx = canvas.getContext("2d");
+                        ctx.font = "30px Arial";
+                        ctx.fillText(text ,10,50);
+                    } else {
+                        var canvas = document.getElementById("canvas");
+                        var ctx = canvas.getContext("2d");
+                        ctx.font = "30px Arial";
+                        ctx.fillText("Aww man, you should have typed something" ,10,50);
+                    }
+                }
+
+            </script><br/>
+        </div>
+    </body>
+</html>
