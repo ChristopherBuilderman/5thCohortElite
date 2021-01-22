@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+html, body {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #eee;
+}
+
 ul {
     list-style: none;
 	margin-left: 0;
@@ -6,11 +15,16 @@ ul {
 
 .Title {
     font-size: 40px;
-    font-family: gabriola, sans-serif;
+    /*This font doesn't exist on everyones computer, so I changed it to a google font instead*/
+    /*font-family: gabriola;*/
+    font-family: 'Bangers', cursive;
 }
 
-a {
-    background-color: maroon;
+li {
+    background-color: #b1ebff;
+    padding: 5px 10px;
+    margin: 0;
+    display: inline-block;
 }
 
 a:link, a:visited {
@@ -25,6 +39,6 @@ a:hover, a:active {
 }
 
 a:hover {
-    transition-duration: .5s;
+    transition-duration: .3s;
     transition-timing-function: ease-out;
 }
