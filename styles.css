@@ -1,0 +1,30 @@
+ul {
+    list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.Title {
+    font-size: 40px;
+    font-family: gabriola, sans-serif;
+}
+
+a {
+    background-color: maroon;
+}
+
+a:link, a:visited {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  color: #667;
+}
+
+a:hover {
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
