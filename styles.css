@@ -4,17 +4,6 @@ html {
     overflow-y:scroll
 }
 
-.thick-green-round-border {
-    border-color: green;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 50%;
-}
-
-.ListBoxes{
-    Background-color: green;
-    padding: 20px 20px 20px 20px !important;
-}
 html, body {
     text-align: center;
     font-family: sans-serif;
@@ -27,13 +16,22 @@ ul {
 	margin-left: 0;
 	padding-left: 0;
 }
-
 .Title {
     font-size: 40px;
-    /*This font doesn't exist on everyones computer, so I changed it to a google font instead*/
-    /*font-family: gabriola;*/
     color: rgb(42, 126, 175);
     font-family: 'Bangers', cursive;
+}
+
+.thick-green-round-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: ridge;
+    border-radius: 50%;
+}
+
+.ListBoxes{
+    Background-color: green;
+    padding: 20px 20px 20px 20px !important;
 }
 
 li {
