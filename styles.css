@@ -5,7 +5,7 @@ html {
 }
 .ListBoxes{
     Background-color: green;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px !important;
 }
 html, body {
     text-align: center;
