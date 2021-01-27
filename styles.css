@@ -24,6 +24,7 @@ ul {
     font-size: 40px;
     /*This font doesn't exist on everyones computer, so I changed it to a google font instead*/
     /*font-family: gabriola;*/
+    color: rgb(42, 126, 175);
     font-family: 'Bangers', cursive;
 }
 
