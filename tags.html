@@ -126,5 +126,32 @@
             </label>
           </div>
         </h3>
+         <!-- Jacob -->
+         <div>
+            <form>
+                <Label for="favNum">What is Your favorite integer 0 through 9?</Label>
+                <br></br>
+                <input type="text" id="num" placeholder="Type a Number">
+                <button onclick="yourNum(document.getElementbyID('num').value)">Run Test</button>
+                <canvas id="numTest"></canvas>
+                <script>
+                    function yourNum(txt){
+                        var numTest = document.getElementById("numTest");
+                        var contxt = numTest.getContext("2d");
+                        contxt.fillText("", 10, 50);
+                        contxt.font("30px Arial")
+                        if(!txt.isInteger() || txt < 0 || text > 9) contxt.fillText("Please enter a single digit integer");
+                        else{
+                            contxt.fillText("Your favorite integer is " + txt, 10, 50);
+                        }
+                    }
+                </script>
+            </form>
+            <a href="#">
+                <p strong>
+                    Thanks for listening (^.^)
+                </p>
+            </a>
+        </div>
     </body>
 </html>
