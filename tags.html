@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+<header><img width="348" height="146" src="image/dragon.png" alt="#"></header>
 <html>
     <link rel="stylesheet" href="styles.css">
-    <head class="Title">5th COHORT ELITES</head>
     <body>
         <div>
             <nav>
@@ -12,7 +12,7 @@
                     <li><a href="team/jake.html">Jake's Page</a></li>
                     <li><a href="team/javon.html">Javon's Page</a></li>
                     <li><a href="team/damian.html">Damian's Page</a></li>
-                    <li><a href="tags.html">Tags Page</a></li>
+                    <li><a href="tags.html" style="color: #666666">Tags Page</a></li>
                     <li><a href="nested.html">Nested Page</a></li>
                     <li><a href="attributes.html">Attributes Page</a></li>
                 </ul>
@@ -48,16 +48,110 @@
         </div>
 
         <!-- Chris -->
+        <h3>An Audio Sample:</h3>
         <div>
             <audio controls>
                 <source src="audio/LightFire.mp3" type="audio/mp3">
             </audio>
+            <p>This sound is one<br>
+            that I used in my game<br>
+            I made for GIMM 350.</p>
         </div>
 
-        <!-- Put name here -->
+        <div>
+            <picture>
+                <source media="(min-width:500px)" srcset="image/az_big.png">
+                <img src="image/az_small.png" style="width:auto;">
+            </picture>
+        </div>
+        <h4>Two images exist here.</h4>
+        <uo>
+            <li>
+                <p>PTSD Angel</p>
+            </li>
+            <li>
+                <p>Happy Angel</p>
+            </li>
+        </uo>
 
-        <!-- Put name here -->
 
-        <!-- Put name here -->
+        <!-- Damian -->
+        <div>
+            
+            <h2 style="color: blue;">
+                The Profile Picture
+            </h2>
+            <ul>
+                <li>
+                    Taken around noon <br>
+                </li>
+
+                <q>
+                    While doing a mini Golf Course
+                </q>
+                <br>
+            </ul>
+            <picture>
+                <img class = "thick-green-round-border" src="image/Profile1.jpg" alt="#" width = 300; height="400";>
+            </picture>
+        </div>
+
+        <!-- Javon -->
+        <div>
+          <p>Do You Know <em>da Wae?</em></p>
+          <ul>
+            <li style="background-color: white">
+              <label style="color: black" for="know"><input style="vertical-align: middle; margin: 0px" id="know" type="radio" name="Da Wae"> I know Da Wae</label><br>
+              <label style="color: black" for="dont know"><input style="vertical-align: middle; margin: 0px" id="dont know" type="radio" name="Da Wae"> I don't know Da Wae</label>
+            </li>
+          </ul>
+        </div>
+        <h2>
+          <nav>
+            <a href="https://www.youtube.com/watch?v=2TkTFgy0g2s">
+              <picture>
+                <img id="daWae" height="400px" width="400px" src="image/UgandanKnuckles.png"></img>
+                <footer style="font-size:12px; color: black">Ugandan Kuckles</footer>
+              </picture>
+            </a>
+          </nav>
+        </h2>
+        <h3>
+          <div>
+            <label>
+              <p>
+                Did you find <em>da Wae</em>?<br>
+                Or did <em>da Wae</em> find you?
+              </p>
+            </label>
+          </div>
+        </h3>
+         <!-- Jacob -->
+         <div>
+            <form>
+                <Label for="favNum">What is Your favorite integer 0 through 9?</Label>
+                <br></br>
+                <input type="text" id="num" placeholder="Type a Number">
+                <button onclick="yourNum(document.getElementbyID('num').value)">Run Test</button>
+                <canvas id="numTest"></canvas>
+                <script>
+                    function yourNum(txt){
+                        var numTest = document.getElementById("numTest");
+                        var contxt = numTest.getContext("2d");
+                        contxt.fillText("", 10, 50);
+                        contxt.font("30px Arial")
+                        if(!txt.isInteger() || txt < 0 || text > 9) contxt.fillText("Please enter a single digit integer");
+                        else{
+                            contxt.fillText("Your favorite integer is " + txt, 10, 50);
+                        }
+                    }
+                </script>
+            </form>
+            <a href="#">
+                <p strong>
+                    Thanks for listening (^.^)
+                </p>
+            </a>
+        </div>
     </body>
 </html>
