@@ -1,6 +1,6 @@
 .card {
-    height: 300;
-    width: 400;
+    height: 400px;
+    width: 300px;
     background-color: rgba(44, 130, 201, 1);
     float: left;
     padding: 20px;
