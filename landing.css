@@ -14,16 +14,26 @@
 }
 #jacob.column {
     display: flex;
+    max-height: 150px;
+    max-width: 150px;
 }
 #jessna.column {
     display: flex;
+    max-height: 150px;
+    max-width: 150px;
 }
 #javon.column {
     display: flex;
+    max-height: 150px;
+    max-width: 150px;
 }
 #chris.column {
     display: flex;
+    max-height: 150px;
+    max-width: 150px;
 }
 #damian.column {
     display: flex;
+    max-height: 150px;
+    max-width: 150px;
 }
