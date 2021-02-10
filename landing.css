@@ -9,6 +9,8 @@
     flex: 1;
     min-height: 150px;
     min-width: 150px;
+    max-height: 150px;
+    max-width: 150px;
     padding: 10px;
 }
 .footer {
@@ -17,30 +19,21 @@
 }
 #jacob.column {
     display: flex;
-    max-height: 150px;
-    max-width: 150px;
+    
 }
 #jessna.column {
     display: flex;
-    max-height: 150px;
-    max-width: 150px;
 }
 #javon.column {
     display: flex;
-    max-height: 150px;
-    max-width: 150px;
 }
 #chris.column {
     display: flex;
-    max-height: 150px;
-    max-width: 150px;
 }
 #damian.column {
     display: flex;
-    max-height: 150px;
-    max-width: 150px;
 }
-.img{
-    height: 100%;
-    width: 100%;
+.linkImg{
+    height: 50%;
+    width: 50%;
 }
