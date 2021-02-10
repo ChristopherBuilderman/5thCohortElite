@@ -7,6 +7,9 @@
 }
 .column {
     flex: 1;
+    min-height: 150px;
+    min-width: 150px;
+    padding: 10px;
 }
 .footer {
     padding: 10px;
