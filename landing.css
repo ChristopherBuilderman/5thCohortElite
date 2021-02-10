@@ -1,0 +1,14 @@
+.header {
+    padding: 10px;
+    background-color:aquamarine;
+}
+.row {
+    display: flex;
+}
+.column {
+    flex: 1;
+}
+.footer {
+    padding: px;
+    background-color:aquamarine;
+}
