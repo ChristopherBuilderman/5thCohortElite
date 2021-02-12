@@ -46,9 +46,9 @@
     background: repeating-linear-gradient(
       45deg,
       yellow 0px,
-      yellow 40px,
-      black 40px,
-      black 80px
+      yellow 20px,
+      rgb(0, 134, 18) 40px,
+      black 60px
     );
 }
 .linkImg{
@@ -57,7 +57,8 @@
 }
 
 .content {
-    padding-top: 10px;
     color: black;
+    padding-top: 10px;
     padding: 20px;
+    text-align:center;
 }
