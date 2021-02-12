@@ -19,10 +19,10 @@
 }
 #jacob.column {
     display: flex;
-    
 }
 #jessna.column {
     display: flex;
+    background-color: blue;
 }
 #javon.column {
     display: flex;
@@ -31,7 +31,18 @@
     display: flex;
 }
 #damian.column {
-    display: flex;
+     display: flex; 
+    background-color: aqua;
+}
+#damian.column:hover {
+     display: flex; 
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
 }
 .linkImg{
     height: 50%;
