@@ -4,8 +4,9 @@
     background-color: rgba(44, 130, 201, 1);
     float: left;
     padding: 20px;
-    margin: 36px;
+    margin: auto;
     box-shadow: 0 7px 15px p right rgba(0, 0, 0, 0.6)
+
 }
 
 .content {
@@ -37,5 +38,5 @@
 }
 
 #damian.card {
-    border-radius: 50px;
+    
 }
