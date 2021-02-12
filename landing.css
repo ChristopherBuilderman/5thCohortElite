@@ -1,6 +1,7 @@
 .header {
     padding: 10px;
     background-color:aquamarine;
+    margin:10px;
 }
 .row {
     display: flex;
@@ -18,6 +19,7 @@
 .footer {
     padding: 10px;
     background-color:aquamarine;
+    margin:10px;
 }
 #jake.column {
     display: flex;
@@ -38,8 +40,6 @@
 #damian.column {
      display: flex; 
     background-color: aqua;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 #damian.column:hover {
      display: flex; 
@@ -58,6 +58,6 @@
 
 .content {
     padding-top: 10px;
-    color: white;
+    color: black;
     padding: 20px;
 }
