@@ -17,8 +17,9 @@
     padding: 10px;
     background-color:aquamarine;
 }
-#jacob.column {
+#jake.column {
     display: flex;
+    background-color: blue;
 }
 #jessna.column {
     display: flex;
@@ -26,9 +27,11 @@
 }
 #javon.column {
     display: flex;
+    background-color: blue;
 }
 #chris.column {
     display: flex;
+    background-color: blue;
 }
 #damian.column {
      display: flex; 
