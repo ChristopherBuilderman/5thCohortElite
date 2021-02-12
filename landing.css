@@ -7,12 +7,13 @@
 }
 .column {
     flex: 1;
-    min-height: 200px;
-    max-height: 300px;
+    min-height: 100px;
+    max-height: 500px;
     
-    min-width: 200px;
-    max-width: 300px;
+    min-width: 100px;
+    max-width: 500px;
     padding: 10px;
+    margin:10px;
 }
 .footer {
     padding: 10px;
@@ -37,6 +38,8 @@
 #damian.column {
      display: flex; 
     background-color: aqua;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 #damian.column:hover {
      display: flex; 
@@ -51,4 +54,10 @@
 .linkImg{
     height: 50%;
     width: 50%;
+}
+
+.content {
+    padding-top: 10px;
+    color: white;
+    padding: 20px;
 }
