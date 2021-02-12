@@ -8,9 +8,10 @@
 .column {
     flex: 1;
     min-height: 200px;
+    max-height: 300px;
+    
     min-width: 200px;
-    max-height: 200px;
-    max-width: 200px;
+    max-width: 300px;
     padding: 10px;
 }
 .footer {
@@ -19,7 +20,7 @@
 }
 #jake.column {
     display: flex;
-    background-color: blue;
+    background-color: red;
 }
 #jessna.column {
     display: flex;
@@ -31,7 +32,7 @@
 }
 #chris.column {
     display: flex;
-    background-color: blue;
+    background-color: grey;
 }
 #damian.column {
      display: flex; 
