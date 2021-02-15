@@ -22,7 +22,8 @@
 }
 
 #chris.card {
-
+    -webkit-animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #jake.card {
@@ -63,4 +64,25 @@
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(500px);
+                transform: TranslateX(500px);
+    }
+}
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX();
+    }
+    100% {
+        -webkit-transform: translateX(500px);
+                transform: translateX(500px);
+    }
 }
