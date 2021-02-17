@@ -9,6 +9,18 @@
 
 }
 
+#javon.card{
+  height: 300px;
+  width: 200px;
+  background-color: rgba(84, 38, 158, 1);
+  float: left;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 0 7px 15px 0  right rgba(0, 0, 0, 0.609);
+  background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
+  background-size: 220px, 300px;
+}
+
 .content {
     padding-top: 10px;
     color: white;
@@ -30,17 +42,15 @@
 
 }
 
-#jessna.card {
-
+#JessnasCardDiv {
+    margin:auto;
+    width: 400px;
 }
 
 #javon.card {
 
 }
 
-/* #damian.card {
-    
-} */
 #damian.card {
     background: linear-gradient(270deg, #009018, #030090, #900000);
     background-size: 600% 600%;

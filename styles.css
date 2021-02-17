@@ -16,10 +16,24 @@ ul {
 	margin-left: 0;
 	padding-left: 0;
 }
+
+nav ul {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+}
+
+label {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+}
+
 .Title {
     font-size: 40px;
     color: rgb(42, 126, 175);
-    font-family: 'Bangers', cursive;
 }
 
 .thick-green-round-border {
@@ -55,4 +69,113 @@ a:hover, a:active {
 a:hover {
     transition-duration: .3s;
     transition-timing-function: ease-out;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    min-width: 10%;
+    max-width: 100%;
+    min-height: 5%;
+    max-height: 100%;
+    margin: 10px;
+}
+
+#HeresACustomIDBecauseDanWontAllowInlineStyles {
+    width: 100%;
+}
+
+#AnotherIDThatShouldBeAnInlineStyle {
+    width: 75%;
+}
+
+#JessnaSelfie {
+    background-image: url('image/jessna.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+#nestedTable {
+    display: inline-block;
+}
+
+#submitButton {
+    padding: 10px 18px;
+    border: none;
+    background: linear-gradient(270deg, #eeb62c, #2ceee7, #d32cee);
+    background-size: 200% 200%;
+    cursor: pointer;
+    color: white;
+}
+
+#JessnaAttributeDiv {
+    width: 900px;
+    margin: auto;
+}
+
+#JessnaAttributeDiv input {
+    padding: 4px;
+    width:150px;
+}
+
+.JessnaHeader {
+    font-family: 'Bangers', cursive;
+}
+
+.JessnasText {
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+}
+
+.JessnaComicContainer {
+    border: 7px solid black;
+    padding: 5px;
+}
+
+/*This is Jessna's animation*/
+#heart {
+  fill: #ff75c0;
+  position: relative;
+  top: 45%;
+  width: 50px;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.3); fill: #00bfff;}
+  50% { transform: scale(1); fill: #ff4eae;}
+  60% { transform: scale(1.3); fill: #00bfff;}
+  100% { transform: scale(1); }
+}
+/*This one doesn't count vvv*/
+#Jessnas.card {
+    background: linear-gradient(270deg, #eeb62c, #2ceee7, #d32cee);
+    background-size: 600% 600%;
+
+    -webkit-animation: JessnasCard 9s ease infinite;
+    -moz-animation: JessnasCard 9s ease infinite;
+    animation: JessnasCard 9s ease infinite;
+    color: white;
+}
+
+@-webkit-keyframes JessnasCard {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes JessnasCard {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes JessnasCard {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }

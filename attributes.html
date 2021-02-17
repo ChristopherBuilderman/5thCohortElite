@@ -2,6 +2,8 @@
 <header><img width="348" height="146" src="image/dragon.png" alt="#"></header>
 <html>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <body>
         <div>
             <nav>
@@ -21,10 +23,10 @@
         </div>
 
         <!-- Jessna -->
-        <div id="Jessna" style="width: 900px; margin: auto;">
+        <div id="JessnaAttributeDiv">
                 <label for="Name">Please Type Something:</label>
-                <input style="padding: 4px; width:150px;" type="text" id="Name" name="Name" placeholder="Type something" title="Input for Text"><br><br>
-                <button onclick="submit(document.getElementById('Name').value)">Submit</button>
+                <input type="text" id="Name" name="Name" placeholder="Type something" title="Input for Text"><br><br>
+                <button id="submitButton" onclick="submit(document.getElementById('Name').value)">Submit</button>
             <canvas id="canvas" width="750px" height="500px">
             </canvas>
             <article width="100px">
@@ -32,7 +34,7 @@
             </article>
             <script>
                 function submit (text) {
-                    if(text != null) {
+                    if(text != "") {
                         var canvas = document.getElementById("canvas");
                         var ctx = canvas.getContext("2d");
                         ctx.font = "30px Arial";
@@ -62,7 +64,7 @@
         </div>
 
 
-        <!-- Damian --> 
+        <!-- Damian -->
         <div>
             <img src="image/dragon.png" alt="A pixelized dragon and the words 5th Cohort Elites" style = width:800px; id="none" type="picture" understanging = "maybe">
             <h1 lang="Eng" artist="Damian Buhler">
@@ -71,7 +73,7 @@
             <H2 lang="Eng" Discription="Filler Text">
                 A picture that i made to show the team name better.
             </H2>
-            
+
         </div>
 
         <!-- Chris-->
