@@ -6,7 +6,6 @@
     padding: 20px;
     margin: auto;
     box-shadow: 0 7px 15px p right rgba(0, 0, 0, 0.6)
-
 }
 
 #javon.card{
@@ -50,11 +49,13 @@
 #damian.card {
     background: linear-gradient(270deg, #009018, #030090, #900000);
     background-size: 600% 600%;
-
+    
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
+    margin:10px;
 }
+
 
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
