@@ -46,10 +46,26 @@
     width: 400px;
 }
 
+#jessna.card {
+
+}
+
+#javon.card {
+
+    background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
+    background-size: 350px;
+    background-position: center;
+    background-repeat:no-repeat;
+    animation: fade 5s linear infinite;
+}
+
+/* #damian.card {
+
+} */
 #damian.card {
     background: linear-gradient(270deg, #009018, #030090, #900000);
     background-size: 600% 600%;
-    
+
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
@@ -92,4 +108,11 @@
         -webkit-transform: translateX(500px);
                 transform: translateX(500px);
     }
+}
+@keyframes fade {
+  0%{opacity: 1;}
+  25%{opacity: .5}
+  50%{opacity: 0;}
+  75%{opacity: .5}
+  100%{opacity: 1;}
 }
