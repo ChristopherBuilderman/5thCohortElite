@@ -1,46 +1,16 @@
 <!DOCTYPE html>
 <header><img width="348" height="146" src="../image/dragon.png" alt="#"></header>
 <html>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../card.css">
-    <style>
-/* .heart {
-position: absolute;
-margin: auto;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background-color: pink;
-height: 50px;
-width: 50px;
-transform: rotate(-45deg);
-}
-.heart::after {
-background-color: pink;
-content: "";
-border-radius: 50%;
-position: absolute;
-width: 50px;
-height: 50px;
-top: 0px;
-left: 25px;
-}
-.heart::before {
-content: "";
-background-color: pink;
-border-radius: 50%;
-position: absolute;
-width: 50px;
-height: 50px;
-top: -25px;
-left: 0px;
-} */
-</style>
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../card.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    </head>
     <body>
         <div>
             <nav>
-                <ul style="display: inline-block;">
+                <ul>
                     <li><a href="../index.html">Index Page</a></li>
                     <li><a href="chris.html">Chris' Page</a></li>
                     <li><a href="jessna.html" style="color: #666666">Jessna's Page</a></li>
@@ -53,11 +23,43 @@ left: 0px;
                 </ul>
             </nav>
         </div>
-        <h1>Jessna's Page</h1>
-        <div style="margin:auto; width: 400px;">
-            <div class="card" style="background:linear-gradient(90deg, rgba(230,148,40,1) 0%, rgba(211,223,61,1) 38%, rgba(0,212,255,1) 100%)">
+        <h1 class="JessnaHeader">Jessna's Page</h1>
+        <!-- <div id="JessnasCardDiv">
+             <div class="card" id="Jessnas">
                 <img src="..\image\jessna.jpg" width="300" height="200" alt="Jessna">
-                <p style="color:white;">JESSNA<br/><br/>Attack: 27<br/>Defense: 19</p>
+                <p>JESSNA<br/><br/>Attack: 27<br/>Defense: 19</p>
+            </div>
+        </div> -->
+        <div class="JessnaComicContainer">
+            <div class="row">
+                <div class="column JessnaComicContainer" id="JessnaSelfie">
+                    <!-- <img src="..\image\jessna.jpg" width="450" height="300" alt="Jessna"> -->
+                </div>
+                <div class="column JessnaComicContainer" >
+                    <p class="JessnasText">Hey! I'm Jessna Rodriguez and I've been doing Web Development since my freshman year of high school. I
+                    really enjoy being able to type something out and then seeing a result on the webpage. During my sophomore year, we had to look
+                into our dream job, and I found out that someone who is a master at Web Development AND Web Design is called a unicorn. Even though
+                my dream job has changed since them, I still have various references to unicorns in my room and my personal portfolio website.<br/><br/><br/><br/>(>^w^)> <(^u^<)
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column JessnaComicContainer" id="AnotherIDThatShouldBeAnInlineStyle">
+                    <h1 class="JessnaHeader">Fun Facts about Me:</h1>
+                    <p class="JessnasText">
+                        My Favorite artist is Hailee Steinfeld<br/> I love apple pie <br/> I sell T-shirts and other apparel with my art on them<br/> I have a 5.5 ft. tall unicorn doodle on my wall that I made <br/>
+                        I like cars <br/> I ride a Onewheel <br/> Scarlet Witch is my favorite Marvel character <br/> The other day I learned I could be an actual Agent of S.H.E.I.L.D. in real life
+                    </p>
+                </div>
+                <div class="column JessnaComicContainer">
+                    <svg id="heart" viewBox="0 0 32 29.6">
+                      <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                    	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                    </svg>
+                </div>
+                <div class="column JessnaComicContainer" id="HeresACustomIDBecauseDanWontAllowInlineStyles">
+                    <p>Need to put something here</p>
+                </div>
             </div>
         </div>
     </body>
