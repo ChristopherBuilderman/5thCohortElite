@@ -41,10 +41,6 @@
      display: flex; 
     background-color: aqua;
 }
-/* #damian.column:hover {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/de/Flag_of_Bolivia_%28state%29.svg);
-    background-size: 220px, 300px;
-} */
 #damian.column:hover {
     background: linear-gradient(270deg, #009018, #030090, #900000);
     background-size: 600% 600%;
