@@ -2,6 +2,7 @@
 <header><img width="348" height="146" src="../image/dragon.png" alt="#"></header>
 <html style="background-color: #000000 !important">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../card.css">
     <style>
       li{
         background-color: blue;
@@ -9,23 +10,6 @@
       p{
         color: white;
       }
-      .card{
-        height: 300px;
-        width: 200px;
-        background-color: rgba(84, 38, 158, 1);
-        float: left;
-        padding: 20px;
-        margin: 30px;
-        box-shadow: 0 7px 15px 0  right rgba(0, 0, 0, 0.609);
-      }
-
-      #javon.card{
-        background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
-        background-size: 220px, 300px;
-        animation-name: fade;
-        animation duration: 2s;
-          }
-
       .content{
         padding-top: 10px;
         color: white;
@@ -36,15 +20,6 @@
       .image{
         height: 50%;
         width: 50%;
-      }
-
-      @@keyframes fade{
-        0%{
-          opacity: 1;
-        }
-        100%{
-          opacity: 0.1;
-        }
       }
     </style>
     <body style="background-color: #000000 !important">
@@ -71,20 +46,18 @@
           </div>
         </h1>
         <head>
-        <link rel='stylesheet' type="text/css" href="Card.css">
     </head>
     <body>
-        <div id="javon" class="card">
+      <div style="margin: auto; width: 350px">
+        <div id="javon" class="card" style="background-color: rgba(84, 38, 158, 1)">
             <div class="image">
-                <img height="200px" width="200px" src="../image/JPEG_20190831_214323.jpg"></img>
+                <img style="height: 250px; width:250px; position: center" src="../image/JPEG_20190831_214323.jpg"></img>
             </div><br><br>
-            <div class="content" style="padding: 20px; text-align: center">
+            <div class="content" style="padding: 20px; text-align: center; font-size: 30px">
                 Attack: Infinte <br>Defense: Infinite
             </div>
         </div>
-        <div>
-
-        </div>
+      </div>
     </body>
     </body>
 </html>
