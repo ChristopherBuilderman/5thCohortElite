@@ -22,6 +22,8 @@
       #javon.card{
         background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
         background-size: 220px, 300px;
+        animation-name: fade;
+        animation duration: 2s;
           }
 
       .content{
@@ -34,6 +36,15 @@
       .image{
         height: 50%;
         width: 50%;
+      }
+
+      @@keyframes fade{
+        0%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 0.1;
+        }
       }
     </style>
     <body style="background-color: #000000 !important">
