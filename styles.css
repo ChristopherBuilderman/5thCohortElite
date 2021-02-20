@@ -188,7 +188,24 @@ skinnyTextDamian {
 
 
 /* jake's css changes */
-
+.jaContainer {
+    min-height: 300px;
+    width: 100%;
+    background: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+.jakeItem1{
+    background: rgb(29, 209, 197);
+}
+#jakePicID {
+    background-image: url('image/jakePic.jpg');
+    width: 50%;
+    height: 50%;
+    border-radius: 30px
+}
 /* javon's css changes */
 
 /* jessna's css changes */
