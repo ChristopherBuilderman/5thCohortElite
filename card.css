@@ -39,7 +39,8 @@
 }
 
 #javon.card {
-
+    margin-left: 75px;
+    overflow: hidden;
     background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
     background-size: 350px;
     background-position: center;
