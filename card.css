@@ -20,6 +20,12 @@
     padding: 20px;
 }
 
+.image.chrisfix {
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+}
+
 #jake.card {
 
 }

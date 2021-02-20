@@ -234,6 +234,7 @@ skinnyTextDamian {
 
 #chris.card {
     animation: slide-right 1s ease-out both;
+    background-color: rgb(128, 0, 0);
 }
 
 @keyframes slide-right {
@@ -241,10 +242,18 @@ skinnyTextDamian {
         transform: translateX(3000px);
     }
     to {
-        transform: translateX(100px);
+        transform: translateX(0px);
     }
 }
 
 /*Chris' Class*/
 
+.ChrisContainer {
+    border: 5px solid rgb(128, 0, 0);
+    padding: 7px;
+}
+
+#CardContainer {
+    width: 440px;
+}
 
