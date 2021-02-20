@@ -122,6 +122,12 @@ a:hover {
     width:150px;
 }
 
+#JessnasLink {
+    font-size: 10vh;
+    font-family: 'Bangers', cursive;
+    color: black;
+}
+
 .JessnaHeader {
     font-family: 'Bangers', cursive;
 }
