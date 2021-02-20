@@ -235,6 +235,9 @@ skinnyTextDamian {
 #chris.card {
     animation: slide-right 1s ease-out both;
     background-color: rgb(128, 0, 0);
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes slide-right {
@@ -246,14 +249,54 @@ skinnyTextDamian {
     }
 }
 
-/*Chris' Class*/
+/*Chris' Classes and ID's*/
 
 .ChrisContainer {
     border: 5px solid rgb(128, 0, 0);
     padding: 7px;
 }
 
-#CardContainer {
-    width: 440px;
+.image.chrisfix {
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
 }
 
+#CardContainer {
+    width: max-content;
+}
+
+#FlexRow.row {
+    display: flex;
+}
+
+#CenteredColumn.column {
+    margin: auto;
+}
+
+.ContentBuffer {
+    background-color: rgb(128, 0, 0);
+    box-sizing: border-box; /* This has to be the most useful thing ever for what I want to do. */
+    min-height: 100%;
+    padding-top: 30px;
+    flex-grow: 1;
+}
+
+.ChrisChamp {
+    background-color: rgb(128, 0, 0);
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.ChampImage {
+    height: 50%;
+    width: height;
+    margin-bottom: 10px
+}
+
+.ChrisText {
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
