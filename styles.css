@@ -185,7 +185,10 @@ skinnyTextDamian {
       rgb(0, 155, 0) 15px
     );
 }
-
+.damianContainer{
+    border: 7px solid black;
+    padding: 5px;
+}
 
 /* jake's css changes */
 .jaContainer {
