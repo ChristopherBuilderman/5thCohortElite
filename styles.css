@@ -122,6 +122,12 @@ a:hover {
     width:150px;
 }
 
+#JessnasLink {
+    font-size: 10vh;
+    font-family: 'Bangers', cursive;
+    color: black;
+}
+
 .JessnaHeader {
     font-family: 'Bangers', cursive;
 }
@@ -149,7 +155,7 @@ a:hover {
     font-size: 15px;
     font-family:cursive;
 }
-#bodyTextDamian{
+#bodyTextDamian.body{
     text-align:left;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -165,7 +171,7 @@ skinnyTextDamian {
     font-style: italic;
     font-weight: 500 !important;
 }
-.candy{
+#sweet.candy{
     width: 100%;
     height: 50px;
     margin:  50 auto;
@@ -179,11 +185,95 @@ skinnyTextDamian {
       rgb(0, 155, 0) 15px
     );
 }
+.damianContainer{
+    border: 7px solid black;
+    padding: 5px;
+}
 
 /* jake's css changes */
-
+.jaContainer {
+    min-height: 300px;
+    width: 100%;
+    background: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+.jakeItem1{
+    background: rgb(29, 209, 197);
+}
+#jakePicID {
+    background-image: url('image/jakePic.jpg');
+    width: 50%;
+    height: 50%;
+    border-radius: 30px
+}
 /* javon's css changes */
+#javon.row{
+  margin: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+#javon.column{
+  color: white;
+  font-size: 20px;
+  background: black;
+  padding: 10px;
+  height: 500px;
+  white-space: nowrap;
+}
+
+#javon.columnBorder{
+  background: linear-gradient(309deg, #000000, #6b05ef);
+  background-size: 400% 400%;
+
+  -webkit-animation: colGradientBorder 6s ease infinite;
+  -moz-animation: colGradientBorder 6s ease infinite;
+  animation: colGradientBorder 6s ease infinite;
+}
+#javon.rowBorder{
+  margin: 100px;
+  background: linear-gradient(45deg, #0021b7, #000000, #0021b7);
+      background-size: 200% 200%;
+
+      -webkit-animation: rowGradientBorder 7s ease alternate infinite;
+      -moz-animation: rowGradientBorder 7s ease alternate infinite;
+      animation: rowGradientBorder 7s ease alternate infinite;
+}
+
+@-webkit-keyframes colGradientBorder {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@-moz-keyframes colGradientBorder {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@keyframes colGradientBorder {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+
+@-webkit-keyframes rowGradientBorder {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+@-moz-keyframes rowGradientBorder {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+@keyframes rowGradientBorder {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
 /* jessna's css changes */
 
 /*This is Jessna's animation*/
@@ -299,4 +389,10 @@ skinnyTextDamian {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
     line-height: 1.6;
+
+#current{
+    color: #666666;
+}
+#currentJavon{
+    color: #ff9100;
 }
