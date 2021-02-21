@@ -196,8 +196,8 @@ skinnyTextDamian {
     border: 8px solid seagreen;
     
 }
-.jakeBio{
-    background: rgb(29, 209, 197);
+#jakeBio{
+    background: salmon;
 }
 #jakeText {
     font-family: "papyrus", cursive;
