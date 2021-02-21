@@ -210,53 +210,119 @@ skinnyTextDamian {
     border-radius: 30px
 }
 /* javon's css changes */
+
+#javonProfilePic{
+  margin-left: 30px;
+  overflow: hidden;
+  background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
+  background-size: 350px;
+  background-position: center;
+  background-repeat:no-repeat;
+  animation: fade 5s linear infinite;
+  background-color: rgba(84, 38, 158, 1);
+}
+
+#javonIMG{
+   height: 250px;
+   width:250px;
+   position: center;
+}
+
+#darkMode{
+  background-color: #000000 !important;
+}
+
+#darkLinks{
+  background-color: Blue;
+}
+
+#javonSubHead{
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+#javonPageText{
+  color: white;
+}
+
+#javonCardCont.content{
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
 #javon.row{
-  margin: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 20px;
+  background: black;
+  padding: 30px 10px;
+  justify-content: center;
 }
 
 #javon.column{
-  color: white;
+  color: lightskyblue;
   font-size: 20px;
   background: black;
   padding: 10px;
   height: 500px;
-  white-space: nowrap;
+  width: 250px;
+  z-index: -1;
+  flex-grow: 1;
 }
 
-#javon.columnBorder{
-  background: linear-gradient(309deg, #000000, #6b05ef);
+#javonMid.column{
+  color: lightskyblue;
+  font-size: 20px;
+  background: black;
+  padding: 10px;
+  height: 500px;
+  width: 400px;
+  z-index: -1;
+  flex-grow: 3;
+}
+
+#javonBorder.columnBorder{
+  justify-content: center;
+  background: linear-gradient(-45deg, #000000, #6b05ef);
   background-size: 400% 400%;
 
-  -webkit-animation: colGradientBorder 6s ease infinite;
-  -moz-animation: colGradientBorder 6s ease infinite;
-  animation: colGradientBorder 6s ease infinite;
+  -webkit-animation: colGradientBorder 3.5s ease infinite;
+  -moz-animation: colGradientBorder 3.5s ease infinite;
+  animation: colGradientBorder 3.5s ease infinite;
 }
-#javon.rowBorder{
-  margin: 100px;
+#javonBorder.rowBorder{
+  justify-content: center;
+  margin-left: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 1200px;
   background: linear-gradient(45deg, #0021b7, #000000, #0021b7);
-      background-size: 200% 200%;
+      background-size: 400% 400%;
 
       -webkit-animation: rowGradientBorder 7s ease alternate infinite;
       -moz-animation: rowGradientBorder 7s ease alternate infinite;
       animation: rowGradientBorder 7s ease alternate infinite;
 }
 
+javonText.Text{
+  justify-content: center;
+  font-size: 20px;
+  word-wrap: wrap;
+}
+
 @-webkit-keyframes colGradientBorder {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
 }
 @-moz-keyframes colGradientBorder {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
 }
 @keyframes colGradientBorder {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
 }
 
 @-webkit-keyframes rowGradientBorder {
