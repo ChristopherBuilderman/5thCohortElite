@@ -192,18 +192,18 @@ skinnyTextDamian {
 
 /* jake's css changes */
 .jaContainer {
-    min-height: 300px;
-    width: 100%;
-    background: green;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    padding: 5px;
+    border: 8px solid seagreen;
+    
 }
-.jakeItem1{
+.jakeBio{
     background: rgb(29, 209, 197);
 }
-#jakePicID {
+#jakeText {
+    font-family: "papyrus", cursive;
+    font-size: 24px 
+}
+#jakePicture {
     background-image: url('image/jakePic.jpg');
     width: 50%;
     height: 50%;
