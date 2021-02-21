@@ -194,7 +194,6 @@ skinnyTextDamian {
 .jaContainer {
     padding: 5px;
     border: 8px solid seagreen;
-    
 }
 #jakeBio{
     background: salmon;
@@ -209,6 +208,11 @@ skinnyTextDamian {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+}
+#addMe.games {
+    font-size: 20px;
+    background-color: salmon;
+    font-family: Haettenschweiler; 
 }
 /* javon's css changes */
 
