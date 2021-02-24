@@ -200,7 +200,7 @@ skinnyTextDamian {
 }
 .jakeText {
     font-family: 'Papyrus', cursive;
-    font-size: 24px 
+    font-size: 24px
 }
 #jakePicture {
     background-image: url('image/jacobPic.jpg');
@@ -212,7 +212,7 @@ skinnyTextDamian {
 #addMe.games {
     font-size: 20px;
     background-color: salmon;
-    font-family: Haettenschweiler; 
+    font-family: Haettenschweiler;
 }
 /* javon's css changes */
 
@@ -250,6 +250,14 @@ skinnyTextDamian {
   color: white;
 }
 
+#javonLink{
+  color: lightskyblue;
+  justify-content: center;
+  font-size: 20px;
+  word-wrap: wrap;
+}
+
+
 #javonCardCont.content{
   padding: 20px;
   text-align: center;
@@ -264,7 +272,7 @@ skinnyTextDamian {
 }
 
 #javon.column{
-  color: lightskyblue;
+  color: lightskyblue !important;
   font-size: 20px;
   background: black;
   padding: 10px;
