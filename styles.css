@@ -420,7 +420,6 @@ javonText.Text{
     background-color: rgb(128, 0, 0);
     box-sizing: border-box;
     height: 100%;
-    width: 100%;
 }
 
 @keyframes slide-right {
@@ -434,9 +433,15 @@ javonText.Text{
 
 /*Chris' Classes and ID's*/
 
-.ChrisContainer {
+.ChrisContentContainer {
     border: 5px solid rgb(128, 0, 0);
     padding: 7px;
+    margin: 7px;
+}
+
+.ChrisContainer {
+    border: 5px solid rgb(128, 0, 0);
+    margin: 7px;
 }
 
 .image.chrisfix {
@@ -461,7 +466,6 @@ javonText.Text{
     background-color: rgb(128, 0, 0);
     box-sizing: border-box; /* This has to be the most useful thing ever for what I want to do. */
     min-height: 100%;
-    padding-top: 30px;
     flex-grow: 1;
 }
 
