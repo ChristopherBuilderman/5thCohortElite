@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<header><img width="348" height="146" src="image/dragon.png" alt="#"></header>
 <html>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap CSS -->
-<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap JS -->
-<script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap JS -->
+        <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    </head>
+
     <body>
         <div>
-            <nav>
-                <ul style="display: inline-block;">
-                    <li><a href="landing.html">Landing Page</a></li>
-                    <li><a href="index.html">Index Page</a></li>
-                    <li><a href="team/chris.html">Chris' Page</a></li>
-                    <li><a href="team/jessna.html">Jessna's Page</a></li>
-                    <li><a href="team/jake.html">Jake's Page</a></li>
-                    <li><a href="team/javon.html">Javon's Page</a></li>
-                    <li><a href="team/damian.html">Damian's Page</a></li>
-                    <li><a href="tags.html">Tags Page</a></li>
-                    <li><a href="nested.html">Nested Page</a></li>
-                    <li><a href="attributes.html" id = "current">Attributes Page</a></li>
-                </ul>
+            <header><img width="348" height="146" src="image/dragon.png" alt="#"></header>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eee; display: inline-block">
+                
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="landing.html">Landing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Team Pages
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="team/chris.html">Chris</a>
+                        <a class="dropdown-item" href="team/jessna.html">Jessna</a>
+                        <a class="dropdown-item" href="team/jake.html">Jake</a>
+                        <a class="dropdown-item" href="team/javon.html">Javon</a>
+                        <a class="dropdown-item" href="team/damian.html">Damian</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarPropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            HTML Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="tags.html">Tags</a>
+                            <a class="dropdown-item" href="nested.html">Nested</a>
+                            <a class="dropdown-item active" href="#">Attributes</a>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
             </nav>
         </div>
 
         <!-- Jessna -->
         <div id="JessnaAttributeDiv">
-                <label for="Name">Please Type Something:</label>
-                <input type="text" id="Name" name="Name" placeholder="Type something" title="Input for Text"><br><br>
-                <button id="submitButton" onclick="submit(document.getElementById('Name').value)">Submit</button>
+            <label for="Name">Please Type Something:</label>
+            <input type="text" id="Name" name="Name" placeholder="Type something" title="Input for Text"><br><br>
+            <button id="submitButton" onclick="submit(document.getElementById('Name').value)">Submit</button>
             <canvas id="canvas" width="750px" height="500px">
             </canvas>
             <article width="100px">
@@ -54,23 +79,21 @@
                         ctx.fillText("Aww man, you should have typed something" ,10,50);
                     }
                 }
-
             </script><br/>
         </div>
 
         <!-- Javon -->
         <div>
-          <span>
-            <a href="https://drive.google.com/file/d/1dJCjlNaa0nK6lC_qK6ZqMgxYvBBD-51o/view?usp=sharing">
-              <label for="kuleshov">
-                <video title="Javon playing Among Us" alt="Among Us video" id="kuleshov" width="600px" height="400px" style="border-color: #00079a; border-width: 10px; border-style: groove; border-radius: 15px"controls autoplay muted loop>
-                  <source src="video/Kuleshov_AmongUs.mp4" type="video/mp4"></source>
-                </video>
-            </label>
-          </a>
-        </span>
+            <span>
+                <a href="https://drive.google.com/file/d/1dJCjlNaa0nK6lC_qK6ZqMgxYvBBD-51o/view?usp=sharing">
+                    <label for="kuleshov">
+                        <video title="Javon playing Among Us" alt="Among Us video" id="kuleshov" width="600px" height="400px" style="border-color: #00079a; border-width: 10px; border-style: groove; border-radius: 15px"controls autoplay muted loop>
+                            <source src="video/Kuleshov_AmongUs.mp4" type="video/mp4"></source>
+                        </video>
+                    </label>
+                </a>
+            </span>
         </div>
-
 
         <!-- Damian -->
         <div>
@@ -81,7 +104,6 @@
             <H2 lang="Eng" Discription="Filler Text">
                 A picture that i made to show the team name better.
             </H2>
-
         </div>
 
         <!-- Chris-->
@@ -100,6 +122,7 @@
                 </select>
             </form>
         </div>
+
         <!-- Jacob -->
         <div title="Jake's attempt at competition for Jessna">
             <form>
