@@ -1,52 +1,79 @@
 <!DOCTYPE html>
-<header><img width="348" height="146" src="../image/dragon.png" alt="#"></header>
 <html>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap CSS -->
-<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap JS -->
-<script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="../card.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../card.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
 
 <body>
     <div>
-        <nav>
-            <ul style="display: inline-block;">
-                <li><a href="../landing.html">Landing Page</a></li>
-                <li><a href="../index.html">Index Page</a></li>
-                <li><a href="chris.html">Chris' Page</a></li>
-                <li><a href="jessna.html">Jessna's Page</a></li>
-                <li><a href="jake.html" id="current">Jake's Page</a></li>
-                <li><a href="javon.html">Javon's Page</a></li>
-                <li><a href="damian.html">Damian's Page</a></li>
-                <li><a href="../tags.html">Tags Page</a></li>
-                <li><a href="../nested.html">Nested Page</a></li>
-                <li><a href="../attributes.html">Attributes Page</a></li>
-            </ul>
+        <header><img width="348" height="146" src="../image/dragon.png" alt="#"></header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eee; display: inline-block">
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../landing.html">Landing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Team Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="chris.html">Chris</a>
+                            <a class="dropdown-item" href="jessna.html">Jessna</a>
+                            <a class="dropdown-item active" href="#">Jake</a>
+                            <a class="dropdown-item" href="javon.html">Javon</a>
+                            <a class="dropdown-item" href="damian.html">Damian</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarPropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            HTML Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../tags.html">Tags</a>
+                            <a class="dropdown-item" href="../nested.html">Nested</a>
+                            <a class="dropdown-item" href="../attributes.html">Attributes</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
-    <h1>Jake's Page</h1>
 
+    <h1>Jake's Page</h1>
     <!--<div id="Jake" class="card" style="background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(251,246,63,1) 10%, rgba(100,226,90,1) 20%, rgba(89,218,219,1) 30%, rgba(85,110,199,1) 40%, rgba(154,82,182,1) 50%, rgba(115,80,171,1) 60%, rgba(179,78,186,1) 70%, rgba(212,75,137,1) 80%, rgba(233,72,181,1) 90%, rgba(252,70,70,1) 100%)">
-            <div class="image">
-                <img height="200px" width="260px" src="https://media.discordapp.net/attachments/644724274908626955/783832853947220018/PXL_20201202_230835677.jpg?width=443&height=591">
-            </div>
-            <div class="content">
-                On the Right
-                <br></br>
-                Attack: 11       Health: 3
-            </div>
-        </div>-->
+                <div class="image">
+                    <img height="200px" width="260px" src="https://media.discordapp.net/attachments/644724274908626955/783832853947220018/PXL_20201202_230835677.jpg?width=443&height=591">
+                </div>
+                <div class="content">
+                    On the Right
+                    <br></br>
+                    Attack: 11       Health: 3
+                </div>
+            </div>-->
     <div class="jaContainer">
         <div class="row">
-            <div class="column jaContainer" id="jakePicture"></div>
-            <div class="column jaContainer" id="jakeBio">
+            <div class="col jaContainer" id="jakePicture"></div>
+            <div class="col jaContainer" id="jakeBio">
                 <p class="jakeText">Yoo! My name is Jacob Ray and for this CSS assignment I was assigned the lead
                     developer role.
                     I got into coding in my junior year of highschool where I took AP Computer Science A and discovered
@@ -61,7 +88,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="column jaContainer">
+            <div class="col jaContainer">
                 <div class="box">
                     <!-- Circular Head-->
                     <div class="head">
@@ -74,7 +101,6 @@
                         </div>
                         <!-- Right Ear Black-->
                         <div class="ear-right">
-
                             <!-- Inner Ear Pink-->
                             <div class="inner-ear"></div>
                         </div>

@@ -55,12 +55,12 @@ li {
     display: inline-block;
 }
 
-a:link, a:visited {
+/* a:link, a:visited {
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}
+} */
 
 a:hover, a:active {
   color: #667;
@@ -69,7 +69,7 @@ a:hover, a:active {
 a:hover {
     transition-duration: .3s;
     transition-timing-function: ease-out;
-}
+} 
 
 .row {
     display: flex;
@@ -89,6 +89,11 @@ a:hover {
 
 #AnotherIDThatShouldBeAnInlineStyle {
     width: 75%;
+}
+
+#CenterContainer {
+    width: auto;
+    margin: auto;
 }
 
 #JessnaSelfie {
@@ -140,7 +145,7 @@ a:hover {
 
 .JessnaComicContainer {
     border: 7px solid black;
-    padding: 5px;
+    margin: 5px;
 }
 /* Style css changes */
 
@@ -425,7 +430,6 @@ javonText.Text{
     background-color: rgb(128, 0, 0);
     box-sizing: border-box;
     height: 100%;
-    width: 100%;
 }
 
 @keyframes slide-right {
@@ -439,9 +443,15 @@ javonText.Text{
 
 /*Chris' Classes and ID's*/
 
-.ChrisContainer {
+.ChrisContentContainer {
     border: 5px solid rgb(128, 0, 0);
     padding: 7px;
+    margin: 7px;
+}
+
+.ChrisContainer {
+    border: 5px solid rgb(128, 0, 0);
+    margin: 7px;
 }
 
 .image.chrisfix {
@@ -466,7 +476,6 @@ javonText.Text{
     background-color: rgb(128, 0, 0);
     box-sizing: border-box; /* This has to be the most useful thing ever for what I want to do. */
     min-height: 100%;
-    padding-top: 30px;
     flex-grow: 1;
 }
 
