@@ -69,7 +69,7 @@ a:hover, a:active {
 a:hover {
     transition-duration: .3s;
     transition-timing-function: ease-out;
-} 
+}
 
 .row {
     display: flex;
@@ -246,7 +246,7 @@ skinnyTextDamian {
 }
 
 #darkLinks{
-  background-color: Blue;
+  background-color: #6b05ef;
 }
 
 #javonSubHead{
