@@ -217,7 +217,10 @@ skinnyTextDamian {
 /* javon's css changes */
 
 #javonProfilePic{
-  margin-left: 30px;
+  display: inline-block;
+  width: auto;
+  height: 90%;
+  margin: 5%;
   overflow: hidden;
   background-image: url(https://i.pinimg.com/originals/28/d4/36/28d436823890f7c6e5db2fa201b6a33c.gif);
   background-size: 350px;
@@ -258,18 +261,12 @@ skinnyTextDamian {
 }
 
 
-#javonCardCont.content{
+/*#javonCardCont.content{
   padding: 20px;
   text-align: center;
   font-size: 30px;
 }
 
-#javon.row{
-  margin: 10px 20px;
-  background: black;
-  padding: 30px 10px;
-  justify-content: center;
-}
 
 #javon.column{
   color: lightskyblue !important;
@@ -291,25 +288,38 @@ skinnyTextDamian {
   width: 400px;
   z-index: -1;
   flex-grow: 3;
+}*/
+
+#javon.row{
+  background: black;
+  margin: auto;
+  width: auto;
+  padding: 2%;
 }
 
-#javonBorder.columnBorder{
-  justify-content: center;
+#javon.col{
+  background: black;
+  width: auto;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  color: lightskyblue !important;
+}
+
+#javonColBorder{
   background: linear-gradient(-45deg, #000000, #6b05ef);
   background-size: 400% 400%;
+  padding: 1.5%;
 
   -webkit-animation: colGradientBorder 3.5s ease infinite;
   -moz-animation: colGradientBorder 3.5s ease infinite;
   animation: colGradientBorder 3.5s ease infinite;
 }
-#javonBorder.rowBorder{
+#javonRowBorder{
   justify-content: center;
-  margin-left: 150px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 1200px;
+  padding: 1.5% 2%;
   background: linear-gradient(45deg, #0021b7, #000000, #0021b7);
-      background-size: 400% 400%;
+  background-size: 800% 800%;
 
       -webkit-animation: rowGradientBorder 7s ease alternate infinite;
       -moz-animation: rowGradientBorder 7s ease alternate infinite;
