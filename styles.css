@@ -330,11 +330,11 @@ skinnyTextDamian {
   justify-content: center;
   padding: 1.5% 2%;
   background: linear-gradient(45deg, #00008B, #000000, #00008B);
-  background-size: 800% 800%;
+  background-size: 400% 400%;
 
-      -webkit-animation: rowGradientBorder 7s ease alternate infinite;
-      -moz-animation: rowGradientBorder 7s ease alternate infinite;
-      animation: rowGradientBorder 7s ease alternate infinite;
+      -webkit-animation: rowGradientBorder 3.5s ease alternate infinite;
+      -moz-animation: rowGradientBorder 3.5s ease alternate infinite;
+      animation: rowGradientBorder 3.5s ease alternate infinite;
 }
 
 javonText.Text{
