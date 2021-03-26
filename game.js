@@ -1,31 +1,21 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-
-function loadImage(x, y, width, height) {
-    ctx = myGameArea.context;
-
-    player_image = new Image();
-    player_image.src = "AmogusArt/Red.png";
-    player_image.onload = function() {
-        ctx.drawImage(player_image, 50, 50, 100, 100);
-    }
-}
+var gameCanvas = document.getElementById("gameCanvas");
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(60, 60, "red", 10, 120, "player");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
 
 var myGameArea = {
-    canvas : document.createElement("canvas"),
+    canvas : gameCanvas,
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 960;
+        this.canvas.height = 540;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
@@ -51,10 +41,25 @@ function component(width, height, color, x, y, type, src) {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
-        } else {
-            //ctx.fillStyle = color;
-            //ctx.fillRect(this.x, this.y, this.width, this.height);
-            //loadImage(this.x, this.y, this.width, this.height);
+        } if (this.type == "pipe") {
+            ctx = myGameArea.context;
+
+            pipe_image = new Image();
+            pipe_image.src = 'AmogusArt/Pipe.png';
+            ctx.drawImage(pipe_image, this.x, this.y, this.width, this.height);
+        } if (this.type == "pipeu") {
+            ctx = myGameArea.context;
+
+            pipeu_image = new Image();
+            pipeu_image.src = 'AmogusArt/PipeU.png';
+            ctx.drawImage(pipeu_image, this.x, this.y, this.width, this.height);
+        } if (this.type == "pipebody") {
+            ctx = myGameArea.context;
+
+            pipebody_image = new Image();
+            pipebody_image.src = 'AmogusArt/PipeBody.png';
+            ctx.drawImage(pipebody_image, this.x, this.y, this.width, this.height);
+        } if (this.type == "player") {
             ctx = myGameArea.context;
 
             player_image = new Image();
@@ -102,7 +107,7 @@ function component(width, height, color, x, y, type, src) {
 }
 
 function updateGameArea() {
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap, score;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             return;
@@ -110,22 +115,28 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+    if (myGameArea.frameNo == 1 || everyinterval(200)) {
         x = myGameArea.canvas.width;
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
+        minGap = 80;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+        myObstacles.push(new component(40, 64, "green", x, height - 64, "pipeu"));
+        myObstacles.push(new component(40, height, "green", x, 0, "pipebody"));
+        myObstacles.push(new component(40, 64, "green", x, height + gap, "pipe"));
+        myObstacles.push(new component(40, x - height - gap, "green", x, height + gap, "pipebody"));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-    myScore.text="SCORE: " + myGameArea.frameNo;
+    score = Math.floor(myGameArea.frameNo/200) - 4;
+    if (score < 0) {
+        score = 0;
+    }
+    myScore.text="SCORE: " + score;
     myScore.update();
     myGamePiece.newPos();
     myGamePiece.update();
