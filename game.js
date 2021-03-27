@@ -184,7 +184,7 @@ function updateGameArea() {
             myCrewmates.push(new component(60, 60, "color", x, height + gap / 2 - 32, "object", crewmateColor));
         }
 
-        if (everyinterval(4000)) {
+        if (everyinterval(2000)) {
             speed ++;
         }
     }
