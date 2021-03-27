@@ -69,9 +69,9 @@ function component(width, height, color, x, y, type, src) {
         } if (this.type == "crewmate") {
             ctx = myGameArea.context;
 
-            crewmate_Image = new Image();
-            player_image.src = `AmogusArt/${src}`;
-            ctx.drawImage(player_image, this.x, this.y, this.width, this.height);
+            crewmate_image = new Image();
+            crewmate_image.src = `AmogusArt/${src}`;
+            ctx.drawImage(crewmate_image, this.x, this.y, this.width, this.height);
         }
     }
     this.newPos = function() {
