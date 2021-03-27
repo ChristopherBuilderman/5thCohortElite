@@ -1,17 +1,18 @@
 var myGamePiece;
 var myObstacles = [];
+var myCrewmates = [];
+var myCorpses = [];
 var myScore;
-var gameCanvas = document.getElementById("gameCanvas");
 
 function startGame() {
-    myGamePiece = new component(60, 60, "red", 10, 120, "player");
+    myGamePiece = new component(60, 60, "red", 100, 120, "player");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
 
 var myGameArea = {
-    canvas : gameCanvas,
+    canvas : document.getElementById("gameCanvas"),
     start : function() {
         this.canvas.width = 960;
         this.canvas.height = 540;
@@ -65,6 +66,12 @@ function component(width, height, color, x, y, type, src) {
             player_image = new Image();
             player_image.src = 'AmogusArt/Red.png';
             ctx.drawImage(player_image, this.x, this.y, this.width, this.height);
+        } if (this.type == "crewmate") {
+            ctx = myGameArea.context;
+
+            crewmate_Image = new Image();
+            player_image.src = `AmogusArt/${src}`;
+            ctx.drawImage(player_image, this.x, this.y, this.width, this.height);
         }
     }
     this.newPos = function() {
@@ -104,6 +111,10 @@ function component(width, height, color, x, y, type, src) {
         }
         return crash;
     }
+
+    this.getColor = function() {
+        return this.color;
+    }
 }
 
 function updateGameArea() {
@@ -113,6 +124,12 @@ function updateGameArea() {
             return;
         } 
     }
+    for (i = 0; i < myCrewmates.length; i += 1) {
+        if (myGamePiece.crashWith(myCrewmates[i])) {
+            myCorpses.push(new component(60, 60, "color", myCrewmates[i].x, myCrewmates[i].y, "crewmate", "PurpleDead.png"));
+            myCrewmates.splice(i, 1);
+        }
+    }
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(200)) {
@@ -120,18 +137,32 @@ function updateGameArea() {
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 100;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(40, 64, "green", x, height - 64, "pipeu"));
         myObstacles.push(new component(40, height, "green", x, 0, "pipebody"));
         myObstacles.push(new component(40, 64, "green", x, height + gap, "pipe"));
         myObstacles.push(new component(40, x - height - gap, "green", x, height + gap, "pipebody"));
+
+        if (everyinterval(800)) {
+            myCrewmates.push(new component(60, 60, "color", x, height + gap / 2 - 32, "crewmate", "Purple.png"));
+        }
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
+    for (i = 0; i < myCrewmates.length; i += 1) {
+        myCrewmates[i].x += -1;
+        myCrewmates[i].update();
+    }
+    for (i = 0; i < myCorpses.length; i += 1) {
+        myCorpses[i].x += -1;
+        myCorpses[i].update();
+    }
+
+
     score = Math.floor(myGameArea.frameNo/200) - 4;
     if (score < 0) {
         score = 0;
