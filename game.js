@@ -1,17 +1,31 @@
 var myGamePiece;
 var myObstacles = [];
+var myCrewmates = [];
+var myColors = [];
+var myCorpses = [];
 var myScore;
-var gameCanvas = document.getElementById("gameCanvas");
+var speed = 1;
+var score = 0;
+
+var start = document.getElementById("start");
+
+var kill = document.getElementById("killSound");
+var death = document.getElementById("deathSound");
+var music = document.getElementById("backgroundMusic");
+var gameOver = false;
 
 function startGame() {
-    myGamePiece = new component(60, 60, "red", 10, 120, "player");
+    start.style.display = 'none';
+    myGamePiece = new component(60, 60, "red", 100, 120, "object", "Red.png");
     myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myScore = new component("30px", "Consolas", "black", 800, 40, "text");
     myGameArea.start();
+    music.volume = 0.5;
+    music.play();
 }
 
 var myGameArea = {
-    canvas : gameCanvas,
+    canvas : document.getElementById("gameCanvas"),
     start : function() {
         this.canvas.width = 960;
         this.canvas.height = 540;
@@ -41,30 +55,12 @@ function component(width, height, color, x, y, type, src) {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
-        } if (this.type == "pipe") {
+        } if (this.type == "object") {
             ctx = myGameArea.context;
 
-            pipe_image = new Image();
-            pipe_image.src = 'AmogusArt/Pipe.png';
-            ctx.drawImage(pipe_image, this.x, this.y, this.width, this.height);
-        } if (this.type == "pipeu") {
-            ctx = myGameArea.context;
-
-            pipeu_image = new Image();
-            pipeu_image.src = 'AmogusArt/PipeU.png';
-            ctx.drawImage(pipeu_image, this.x, this.y, this.width, this.height);
-        } if (this.type == "pipebody") {
-            ctx = myGameArea.context;
-
-            pipebody_image = new Image();
-            pipebody_image.src = 'AmogusArt/PipeBody.png';
-            ctx.drawImage(pipebody_image, this.x, this.y, this.width, this.height);
-        } if (this.type == "player") {
-            ctx = myGameArea.context;
-
-            player_image = new Image();
-            player_image.src = 'AmogusArt/Red.png';
-            ctx.drawImage(player_image, this.x, this.y, this.width, this.height);
+            crewmate_image = new Image();
+            crewmate_image.src = `AmogusArt/${src}`;
+            ctx.drawImage(crewmate_image, this.x, this.y, this.width, this.height);
         }
     }
     this.newPos = function() {
@@ -107,35 +103,104 @@ function component(width, height, color, x, y, type, src) {
 }
 
 function updateGameArea() {
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap, score;
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap, crewmateColorNum, crewmateColor;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
+            var deathMessage = new component("30px", "Consolas", "black", 270, 270, "text");
+            deathMessage.text = " You Got Caught Being Sus!";
+            deathMessage.update();
+            music.pause();
+
+            if (gameOver == false){
+                death.play();
+                gameOver = true;
+            }
             return;
         } 
     }
+    for (i = 0; i < myCrewmates.length; i += 1) {
+        if (myGamePiece.crashWith(myCrewmates[i])) {
+            myCorpses.push(new component(50, 50, "color", myCrewmates[i].x, myCrewmates[i].y, "object", myColors[i]));
+            myCrewmates.splice(i, 1);
+            myColors.splice(i, 1);
+            kill.play();
+            score ++;
+        }
+    }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(200)) {
+    if (myGameArea.frameNo == 1 || everyinterval(200/speed)) {
         x = myGameArea.canvas.width;
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 80;
+        minGap = 100;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(40, 64, "green", x, height - 64, "pipeu"));
-        myObstacles.push(new component(40, height, "green", x, 0, "pipebody"));
-        myObstacles.push(new component(40, 64, "green", x, height + gap, "pipe"));
-        myObstacles.push(new component(40, x - height - gap, "green", x, height + gap, "pipebody"));
+        myObstacles.push(new component(40, height, "green", x, 0, "object", "PipeBody.png"));
+        myObstacles.push(new component(40, 64, "green", x, height - 64, "object", "PipeU.png"));
+        myObstacles.push(new component(40, x - height - gap, "green", x, height + gap, "object", "PipeBody.png"));
+        myObstacles.push(new component(40, 64, "green", x, height + gap, "object", "Pipe.png"));
+
+        if (everyinterval(600)) {
+            crewmateColorNum = randomIntFromInterval(1, 8);
+            switch (crewmateColorNum) {
+                case 1:
+                    crewmateColor = "Blue.png";
+                    myColors.push("BlueDead.png");
+                    break;
+                case 2:
+                    crewmateColor = "Green.png";
+                    myColors.push("GreenDead.png");
+                    break;
+                case 3:
+                    crewmateColor = "Lime.png";
+                    myColors.push("LimeDead.png");
+                    break;
+                case 4:
+                    crewmateColor = "Pink.png";
+                    myColors.push("PinkDead.png");
+                    break;
+                case 5:
+                    crewmateColor = "Purple.png";
+                    myColors.push("PurpleDead.png");
+                    break;
+                case 6:
+                    crewmateColor = "Teal.png";
+                    myColors.push("TealDead.png");
+                    break;
+                case 7:
+                    crewmateColor = "White.png";
+                    myColors.push("WhiteDead.png");
+                    break;
+                case 8:
+                    crewmateColor = "Yellow.png";
+                    myColors.push("YellowDead.png");
+                    break;
+                default:
+                    console.log("Something has gone wrong");
+                    break;
+            }
+            myCrewmates.push(new component(60, 60, "color", x, height + gap / 2 - 32, "object", crewmateColor));
+        }
+
+        if (everyinterval(2000)) {
+            speed ++;
+        }
     }
     for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += -1;
+        myObstacles[i].x -= speed;
         myObstacles[i].update();
     }
-    score = Math.floor(myGameArea.frameNo/200) - 4;
-    if (score < 0) {
-        score = 0;
+    for (i = 0; i < myCrewmates.length; i += 1) {
+        myCrewmates[i].x -= speed;
+        myCrewmates[i].update();
     }
+    for (i = 0; i < myCorpses.length; i += 1) {
+        myCorpses[i].x -= speed;
+        myCorpses[i].update();
+    }
+
     myScore.text="SCORE: " + score;
     myScore.update();
     myGamePiece.newPos();
@@ -149,4 +214,9 @@ function everyinterval(n) {
 
 function accelerate(n) {
     myGamePiece.gravity = n;
+    
 }
+
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
