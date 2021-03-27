@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     </head>
 
-    <body onLoad="startGame()">
+    <body>
         <div>
             <header><img width="348" height="146" src="image/dragon.png" alt="#"></header>
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eee; display: inline-block">
@@ -64,10 +64,24 @@
             </nav>
         </div>
 
-        <canvas id="gameCanvas" style="border: 1px solid #000000"></canvas>
+        <audio id="killSound">
+          <source src="audio/Kill.mp3" type="audio/mp3"> <!--From Among Us-->
+        </audio>
+        <audio id="deathSound">
+          <source src="audio/Meeting.mp3" type="audio/mp3">
+        </audio>
+        <Audio loop id="backgroundMusic">
+          <source src="audio/AmongDrip.mp3" type="audio/mp3"> <!--From Leonz on Youtube-->
+        </Audio>
+
+        <img src="AmogusArt/FlappySus.png" width="500" height="190">
         <br>
-        <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-        <p>Use the ACCELERATE button to stay in the air</p>
+        <canvas id="gameCanvas" style="border: 1px solid #000000; background:url('AmogusArt/Hallway.png')" width="960" height="540"></canvas>
+        <br>
+        <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">Accelerate</button>
+        <br>
+        <button id="start" onmousedown="startGame()">Start Game</button>
+        <p>Use the Accelerate button to move upwards</p>
         <p>How long can you stay alive?</p>
 
         <script src="game.js"></script>
