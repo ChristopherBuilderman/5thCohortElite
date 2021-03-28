@@ -608,13 +608,13 @@ javonText.Text{
     left: 43%;
     top: 65%;
     border-radius: 50px;
-    z-index: 4;
+    z-index: 5;
   }
   .right-mouth {
      position: absolute;
     width: 5%;
     height: 9.5%;
-    left: 44%;
+    left: 47%;
     top: 72%;
     z-index: 4;
     border-radius: 50%;
